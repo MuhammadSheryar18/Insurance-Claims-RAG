@@ -1,7 +1,6 @@
 __pycache__/
 *.pyc
 .env
-/root/.cache/
-/home/.cache/
-*.bin
-*.pkl
+faiss_index.bin
+chunks.pkl
+documents/
