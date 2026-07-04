@@ -1,3 +1,4 @@
+import startup
 import pickle
 import faiss
 import numpy as np
@@ -62,9 +63,7 @@ def answer_question(question):
     )
     full_text = response[0]["generated_text"]
     answer = full_text[len(prompt):].strip()
-    sources = "\n".join(
-        [f"- {r['source']}" for r in retrieved[:3]]
-    )
+    sources = "\n".join([f"- {r['source']}" for r in retrieved[:3]])
     return answer, sources
 
 with gr.Blocks(title="Insurance Claims RAG") as demo:
@@ -96,4 +95,4 @@ with gr.Blocks(title="Insurance Claims RAG") as demo:
         outputs=[answer_output, sources_output]
     )
 
-demo.launch(server_name="0.0.0.0", server_port=7860)
+demo.launch()
