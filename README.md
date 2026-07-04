@@ -1,22 +1,3 @@
----
-
-title: Insurance Claims RAG
-
-emoji: 🏥
-
-colorFrom: blue
-
-colorTo: green
-
-sdk: gradio
-
-sdk_version: "4.0.0"
-
-app_file: app.py
-
-pinned: false
-
----
 
 # Insurance Claims Document QA System
 
