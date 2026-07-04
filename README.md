@@ -17,9 +17,7 @@ This system solves that by grounding every answer in retrieved source passages, 
 
 ## Architecture
 
-"```\nPDF Documents\n     |\n     v\nText Extraction (pypdf)\n     |\n     v\nChunking (RecursiveCharacterTextSplitter, 500 chars, 50 overlap)\n     |\n     v\nEmbeddings (Sentence Transformers: all-MiniLM-L6-v2)\n     |\n     v\nFAISS Vector Store (IndexFlatL2)\n     |\n     v\nQuery -> Embed Query -> Retrieve Top-5 Chunks -> Build Prompt -> TinyLlama -> Grounded Answer + Source\n```"
-
-new = """```
+```text
 PDF Documents
       |
       v
@@ -36,7 +34,7 @@ FAISS Vector Store (IndexFlatL2)
       |
       v
 User Query --> Embed Query --> Retrieve Top-5 Chunks --> Build Prompt --> TinyLlama --> Answer + Source
-```"""
+```
 
 ## Document Corpus
 
